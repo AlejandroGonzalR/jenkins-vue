@@ -1,10 +1,15 @@
 pipeline {
     
-    agent any
+    agent {
+        docker {
+            image 'node:8-alpine'
+            args '-p 8080:8080'
+        }
+    }
     
     environment {
         CI = 'true'
-        FIREBASE_DEPLOY_TOKEN = credentials('FIREBASE_DEPLOY_TOKEN')
+        FIREBASE_DEPLOY_TOKEN = credentials('firebase_deploy_token')
     }
     
     stages {
