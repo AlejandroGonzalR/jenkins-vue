@@ -1,0 +1,7 @@
+ {
+  "projects": {
+    "default": "vue-simple-form-staging",
+    "staging": "vue-simple-form-staging",
+    "production": "vue-simple-form"
+  }
+}
