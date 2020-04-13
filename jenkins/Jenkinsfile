@@ -34,7 +34,6 @@ pipeline {
         stage('Staging') {
             steps {
                 sh './jenkins/scripts/staging.sh'
-                input message: 'Finished using the Staging version of the Web App? (Click "Proceed" to continue)'
             }
             post {
                 success {
@@ -47,6 +46,7 @@ pipeline {
         }
         stage('Production') {
             steps {
+                input message: 'Proceed to production deploy after finished using the Staging version of the Web App?'
                 sh './jenkins/scripts/deploy.sh'
             }
         }
