@@ -51,7 +51,7 @@
 
       <section id="form-control">
         <b-button id="submit" variant="success" @click="onSubmit" :disabled="isButtonDisabled">Send</b-button>
-        <b-button id="reset" variant="link" @click="onReset" style="margin-left: 5px" :disabled="isButtonDisabled">Reset</b-button>
+        <b-button id="reset" variant="link" @click="onReset" style="margin-left: 5px" :disabled="isButtonDisabled">Reset Form</b-button>
       </section>
     </b-form>
   </div>
